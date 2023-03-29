@@ -1,10 +1,12 @@
 from flask import Flask, request, render_template, send_from_directory
-# from functions import ...
+from functions import load_posts
+from main.main import main_blueprint
 
 POST_PATH = "posts.json"
 UPLOAD_FOLDER = "uploads/images"
 
-from main.main import main_blueprint
+print(load_posts(POST_PATH))
+
 
 app = Flask(__name__)
 
