@@ -11,7 +11,7 @@ def main_page():
 
 
 @main_blueprint.route('/search/')
-def loader():
+def search():
     search_request = request.args['s']
     search_result = search_posts(search_request, POST_PATH)
     return render_template('post_list.html', search_request=search_request, search_posts=search_result)
