@@ -14,7 +14,6 @@ def main_page():
 def loader():
     search_request = request.args['s']
     search_result = search_posts(search_request, POST_PATH)
-    print(search_result)
     return render_template('post_list.html', search_request=search_request, search_posts=search_result)
 
 

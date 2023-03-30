@@ -15,5 +15,4 @@ def search_posts(search_request, path):
     for post in posts:
         if search_request.lower() in post['content'].lower():
             result_posts.append(post)
-            print(post)
     return result_posts
