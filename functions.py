@@ -16,3 +16,8 @@ def search_posts(search_request, path):
         if search_request.lower() in post['content'].lower():
             result_posts.append(post)
     return result_posts
+
+
+def uploads_post(post, path):
+    with open(path, 'w', encoding='utf-8') as file:
+        json.dump(post, file)
